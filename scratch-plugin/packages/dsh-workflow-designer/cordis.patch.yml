@@ -1,0 +1,10 @@
+# One dual-face package: install it into a dsh profile
+# (`dsh plugin --profile <name> add link:./packages/dsh-workflow-designer`)
+# and the patch layer below inserts the single plugin row that mounts BOTH
+# halves: the host side (empty apply for this UI-only slice) and the browser
+# side (scanned from this package's dsh.client declaration, served from
+# lib/client.js).
+
+- insert:
+    - id: workflow-designer
+      name: '@huawe/dsh-workflow-designer'
